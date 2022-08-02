@@ -14,15 +14,14 @@
 
 #include <UtilJson/UtilJson.h>
 
-#include "User/User.h"
-#include "ISesion.h"
-#include "Comunication/ComunicationManager.h"
-#include "Comunication/Interface/IComunicationManagerListener.h"
+#include <ComunicationManager/ComunicationManager.h>
+#include <ComunicationManager/Interface/IComunicationManagerListener.h>
+#include <ComunicationManager/Interface/eTypeMessageAranda.h>
 #include <global/common/global/Runnable.h>
 #include <global/common/sys/thread/Thread.h>
 #include <global/common/sys/thread/EndlessThread.h>
 
-#include "Comunication/Interface/eTypeMessageAranda.h"
+#include "ISesion.h"
 
 
 class Sesion: public ISesion,
@@ -33,7 +32,6 @@ class Sesion: public ISesion,
 
 	std::string sesionName;
 	json configuration;
-	User* user;
 	ComunicationManager* comunicationManager;
 	std::set<std::string> usersOnline;
 

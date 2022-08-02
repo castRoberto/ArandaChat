@@ -8,7 +8,6 @@
 #include "Sesion.h"
 
 Sesion::Sesion(std::string& sesionName, json configuration) :
-		user(0),
 		comunicationManager(0),
 		reportActivityThread(0)
 {
@@ -35,8 +34,6 @@ std::string Sesion::getSender(std::string str) {
 }
 
 void Sesion::init() {
-	user = new User(this->sesionName);
-
 	comunicationManager = new ComunicationManager(configuration, this);
 	comunicationManager->init();
 	/// Se crea hilo para el reporte de actividad
@@ -54,15 +51,10 @@ void Sesion::close() {
 	json offlineMessage;
 	offlineMessage[message_Keys::messageType_Key] = eTypeMsg_Status;
 	offlineMessage[message_Keys::messagePayload_Key] = eOffline;
-	offlineMessage[message_Keys::sesionName_Key] = user->getNameUser();
+	offlineMessage[message_Keys::sesionName_Key] = sesionName;
 
 	comunicationManager->sendMessage(offlineMessage,
 			routingKeysAranda::statusRouting_Key);
-
-	if (user != 0) {
-		delete user;
-		user = 0;
-	}
 
 	if (comunicationManager != 0) {
 		delete comunicationManager;
@@ -75,7 +67,7 @@ void Sesion::activity(json message) {
 	std::string name = message[message_Keys::sesionName_Key];
 
 	if(status == eOnline) {
-		if(name.compare(user->getNameUser()) != 0) {
+		if(name.compare(sesionName) != 0) {
 			usersOnline.insert(name);
 		}
 	} else {
@@ -85,7 +77,7 @@ void Sesion::activity(json message) {
 
 void Sesion::processMessage(json message, std::string routingKey) {
 	std::string dataMsg = message[message_Keys::messagePayload_Key];
-	int pos = routingKey.find(user->getNameUser());
+	int pos = routingKey.find(sesionName);
 	if(pos == -1 && startedChat) {
 		LOG("[" + getSender(routingKey) + "]: " + dataMsg);
 	}
@@ -117,7 +109,7 @@ void Sesion::initChat() {
 	LOG("Chat iniciado, finalice con q");
 	while(startedChat) {
 		std::string routinK = routingKeysAranda::dataRouting_Keys;
-		routinK.append("." + user->getNameUser());
+		routinK.append("." + sesionName);
 		json data;
 		data[message_Keys::messageType_Key] = eTypeMsg_Data;
 
@@ -137,7 +129,7 @@ void* Sesion::run(void *args) {
 	json onlineMessage;
 	onlineMessage[message_Keys::messageType_Key] = eTypeMsg_Status;
 	onlineMessage[message_Keys::messagePayload_Key] = eOnline;
-	onlineMessage[message_Keys::sesionName_Key] = user->getNameUser();
+	onlineMessage[message_Keys::sesionName_Key] = sesionName;
 
 	comunicationManager->sendMessage(onlineMessage, routingKeysAranda::statusRouting_Key);
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
