@@ -9,6 +9,7 @@
 #define RABBITMQMIDDLEWARE_UTIL_UTILJSON_H_
 
 #include <fstream>
+#include <iostream>
 
 #include "json.hpp"
 

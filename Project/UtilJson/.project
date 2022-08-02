@@ -28,7 +28,7 @@
 		<link>
 			<name>Src</name>
 			<type>2</type>
-			<location>/mnt/hgfs/ArandaChat/Source/UtilJson/Src</location>
+			<location>/home/operador/ArandaChatWS/ArandaChat/Source/UtilJson/Src</location>
 		</link>
 	</linkedResources>
 </projectDescription>
