@@ -1,0 +1,14 @@
+04:59:17 **** Incremental Build of configuration Debug for project UtilJson ****
+make all 
+Building target: libUtilJson.a
+Invoking: GCC Archiver
+ar -r  "libUtilJson.a"  ./Src/UtilJson/UtilJson.o   
+ar: creando libUtilJson.a
+Finished building target: libUtilJson.a
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/Libraries/Debug/libUtilJson.a; mv /home/operador/ArandaChat/Project/UtilJson/Debug/libUtilJson.a /home/operador/ArandaChat/Compiled/Libraries/Debug/
+ 
+
+04:59:17 Build Finished. 0 errors, 0 warnings. (took 352ms)
+

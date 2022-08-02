@@ -1,0 +1,14 @@
+04:59:16 **** Incremental Build of configuration Debug for project RabbitMQMiddleware ****
+make all 
+Building target: libRabbitMQMiddleware.a
+Invoking: GCC Archiver
+ar -r  "libRabbitMQMiddleware.a"  ./Src/RabbitMQMiddleware/RabbitEntitys/Consumer.o ./Src/RabbitMQMiddleware/RabbitEntitys/Producer.o ./Src/RabbitMQMiddleware/RabbitEntitys/RabbitMQEntity.o  ./Src/RabbitMQMiddleware/MyHandler.o ./Src/RabbitMQMiddleware/RabbitMQController.o   
+ar: creando libRabbitMQMiddleware.a
+Finished building target: libRabbitMQMiddleware.a
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/Libraries/Debug/libRabbitMQMiddleware.a; mv /home/operador/ArandaChat/Project/RabbitMQMiddleware/Debug/libRabbitMQMiddleware.a /home/operador/ArandaChat/Compiled/Libraries/Debug/
+ 
+
+04:59:17 Build Finished. 0 errors, 0 warnings. (took 495ms)
+
