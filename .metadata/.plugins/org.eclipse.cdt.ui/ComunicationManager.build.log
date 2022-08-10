@@ -1,0 +1,14 @@
+04:59:16 **** Incremental Build of configuration Debug for project ComunicationManager ****
+make all 
+Building target: libComunicationManager.a
+Invoking: GCC Archiver
+ar -r  "libComunicationManager.a"  ./Src/ComunicationManager/ComunicationManager.o   
+ar: creando libComunicationManager.a
+Finished building target: libComunicationManager.a
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/Libraries/Debug/libComunicationManager.a; mv /home/operador/ArandaChat/Project/ComunicationManager/Debug/libComunicationManager.a /home/operador/ArandaChat/Compiled/Libraries/Debug/
+ 
+
+04:59:16 Build Finished. 0 errors, 0 warnings. (took 305ms)
+

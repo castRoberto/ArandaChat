@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Interface, ComunicationManager.cpp, ComunicationManager.h&apos; to &apos;ComunicationManager&apos;" description="Move 3 resources to &apos;ComunicationManager&apos;" destination="Src/ComunicationManager" element1="Src/Interface" element2="Src/ComunicationManager.cpp" element3="Src/ComunicationManager.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="3" stamp="1659433636085" updateReferences="true"/>
+</session>
