@@ -1,0 +1,14 @@
+20:06:05 **** Incremental Build of configuration Debug for project ViewManager ****
+make all 
+Building target: libViewManager.a
+Invoking: GCC Archiver
+ar -r  "libViewManager.a"  ./Src/ViewManager/View.o   
+ar: creando libViewManager.a
+Finished building target: libViewManager.a
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/Libraries/Debug/libViewManager.a; mv /home/operador/ArandaChat/Project/ViewManager/Debug/libViewManager.a /home/operador/ArandaChat/Compiled/Libraries/Debug/
+ 
+
+20:06:06 Build Finished. 0 errors, 0 warnings. (took 364ms)
+

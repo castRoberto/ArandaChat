@@ -1,0 +1,124 @@
+04:59:17 **** Build of configuration Debug for project amqpcpp ****
+make all 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/openssl.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/linux_tcp/openssl.d" -MT"src/linux_tcp/openssl.o" -o "src/linux_tcp/openssl.o" "/home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/openssl.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/openssl.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/sslerrorprinter.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/linux_tcp/sslerrorprinter.d" -MT"src/linux_tcp/sslerrorprinter.o" -o "src/linux_tcp/sslerrorprinter.o" "/home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/sslerrorprinter.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/sslerrorprinter.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/tcpconnection.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/linux_tcp/tcpconnection.d" -MT"src/linux_tcp/tcpconnection.o" -o "src/linux_tcp/tcpconnection.o" "/home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/tcpconnection.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/linux_tcp/tcpconnection.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/array.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "/home/operador/ArandaChat/Source/amqpcpp/src/array.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/array.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/channel.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/channel.d" -MT"src/channel.o" -o "src/channel.o" "/home/operador/ArandaChat/Source/amqpcpp/src/channel.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/channel.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/channelimpl.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/channelimpl.d" -MT"src/channelimpl.o" -o "src/channelimpl.o" "/home/operador/ArandaChat/Source/amqpcpp/src/channelimpl.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/channelimpl.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/connectionimpl.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/connectionimpl.d" -MT"src/connectionimpl.o" -o "src/connectionimpl.o" "/home/operador/ArandaChat/Source/amqpcpp/src/connectionimpl.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/connectionimpl.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/deferredcancel.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/deferredcancel.d" -MT"src/deferredcancel.o" -o "src/deferredcancel.o" "/home/operador/ArandaChat/Source/amqpcpp/src/deferredcancel.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/deferredcancel.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/deferredconfirm.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/deferredconfirm.d" -MT"src/deferredconfirm.o" -o "src/deferredconfirm.o" "/home/operador/ArandaChat/Source/amqpcpp/src/deferredconfirm.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/deferredconfirm.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/deferredconsumer.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/deferredconsumer.d" -MT"src/deferredconsumer.o" -o "src/deferredconsumer.o" "/home/operador/ArandaChat/Source/amqpcpp/src/deferredconsumer.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/deferredconsumer.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/deferredextreceiver.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/deferredextreceiver.d" -MT"src/deferredextreceiver.o" -o "src/deferredextreceiver.o" "/home/operador/ArandaChat/Source/amqpcpp/src/deferredextreceiver.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/deferredextreceiver.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/deferredget.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/deferredget.d" -MT"src/deferredget.o" -o "src/deferredget.o" "/home/operador/ArandaChat/Source/amqpcpp/src/deferredget.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/deferredget.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/deferredrecall.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/deferredrecall.d" -MT"src/deferredrecall.o" -o "src/deferredrecall.o" "/home/operador/ArandaChat/Source/amqpcpp/src/deferredrecall.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/deferredrecall.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/deferredreceiver.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/deferredreceiver.d" -MT"src/deferredreceiver.o" -o "src/deferredreceiver.o" "/home/operador/ArandaChat/Source/amqpcpp/src/deferredreceiver.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/deferredreceiver.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/field.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/field.d" -MT"src/field.o" -o "src/field.o" "/home/operador/ArandaChat/Source/amqpcpp/src/field.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/field.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/flags.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/flags.d" -MT"src/flags.o" -o "src/flags.o" "/home/operador/ArandaChat/Source/amqpcpp/src/flags.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/flags.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/inbuffer.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/inbuffer.d" -MT"src/inbuffer.o" -o "src/inbuffer.o" "/home/operador/ArandaChat/Source/amqpcpp/src/inbuffer.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/inbuffer.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/receivedframe.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/receivedframe.d" -MT"src/receivedframe.o" -o "src/receivedframe.o" "/home/operador/ArandaChat/Source/amqpcpp/src/receivedframe.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/receivedframe.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/table.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/table.d" -MT"src/table.o" -o "src/table.o" "/home/operador/ArandaChat/Source/amqpcpp/src/table.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/table.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/tagger.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/tagger.d" -MT"src/tagger.o" -o "src/tagger.o" "/home/operador/ArandaChat/Source/amqpcpp/src/tagger.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/tagger.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/throttle.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/throttle.d" -MT"src/throttle.o" -o "src/throttle.o" "/home/operador/ArandaChat/Source/amqpcpp/src/throttle.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/throttle.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/amqpcpp/src/watchable.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/amqpcpp/src/include -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"src/watchable.d" -MT"src/watchable.o" -o "src/watchable.o" "/home/operador/ArandaChat/Source/amqpcpp/src/watchable.cpp"
+Finished building: /home/operador/ArandaChat/Source/amqpcpp/src/watchable.cpp
+ 
+Building target: libamqpcpp.a
+Invoking: GCC Archiver
+ar -r  "libamqpcpp.a"  ./src/linux_tcp/openssl.o ./src/linux_tcp/sslerrorprinter.o ./src/linux_tcp/tcpconnection.o  ./src/array.o ./src/channel.o ./src/channelimpl.o ./src/connectionimpl.o ./src/deferredcancel.o ./src/deferredconfirm.o ./src/deferredconsumer.o ./src/deferredextreceiver.o ./src/deferredget.o ./src/deferredrecall.o ./src/deferredreceiver.o ./src/field.o ./src/flags.o ./src/inbuffer.o ./src/receivedframe.o ./src/table.o ./src/tagger.o ./src/throttle.o ./src/watchable.o   
+ar: creando libamqpcpp.a
+Finished building target: libamqpcpp.a
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/Libraries/Debug/libamqpcpp.a; mv /home/operador/ArandaChat/Project/amqpcpp/Debug/libamqpcpp.a /home/operador/ArandaChat/Compiled/Libraries/Debug/
+ 
+
+04:59:41 Build Finished. 0 errors, 0 warnings. (took 23s.334ms)
+

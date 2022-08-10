@@ -1,0 +1,26 @@
+19:36:49 **** Build of configuration Debug for project SesionManager ****
+make all 
+Building file: /home/operador/ArandaChat/Source/SesionManager/Src/SesionManager/Sesion.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/ComunicationManager/Src -I/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src -I/home/operador/ArandaChat/Source/amqpcpp/Src -I/home/operador/ArandaChat/Source/Includes/global.common/Src -I/home/operador/ArandaChat/Source/UtilJson/Src -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"Src/SesionManager/Sesion.d" -MT"Src/SesionManager/Sesion.o" -o "Src/SesionManager/Sesion.o" "/home/operador/ArandaChat/Source/SesionManager/Src/SesionManager/Sesion.cpp"
+/home/operador/ArandaChat/Source/SesionManager/Src/SesionManager/Sesion.cpp: In member function ‘virtual void Sesion::handleMessage(json, std::__cxx11::string)’:
+/home/operador/ArandaChat/Source/SesionManager/Src/SesionManager/Sesion.cpp:91:11: warning: enumeration value ‘eTypeMsg_NotFound’ not handled in switch [-Wswitch]
+    switch (typeMessage) {
+           ^
+/home/operador/ArandaChat/Source/SesionManager/Src/SesionManager/Sesion.cpp:99:40: warning: catching polymorphic type ‘class nlohmann::detail::exception’ by value [-Wcatch-value=]
+   } catch (nlohmann::detail::exception e) {
+                                        ^
+Finished building: /home/operador/ArandaChat/Source/SesionManager/Src/SesionManager/Sesion.cpp
+ 
+Building target: libSesionManager.a
+Invoking: GCC Archiver
+ar -r  "libSesionManager.a"  ./Src/SesionManager/Sesion.o   
+ar: creando libSesionManager.a
+Finished building target: libSesionManager.a
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/Libraries/Debug/libSesionManager.a; mv /home/operador/ArandaChat/Project/SesionManager/Debug/libSesionManager.a /home/operador/ArandaChat/Compiled/Libraries/Debug/
+ 
+
+19:37:09 Build Finished. 0 errors, 2 warnings. (took 19s.463ms)
+

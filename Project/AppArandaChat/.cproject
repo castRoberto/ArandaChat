@@ -27,8 +27,6 @@
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/ComunicationManager/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/amqpcpp/Src"/>
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/SesionManager/Src"/>
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/ViewManager/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/UtilJson/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/Includes/global.common/Src"/>
 								</option>
@@ -36,16 +34,14 @@
 								<option id="gnu.cpp.compiler.option.other.pic.1003720114" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1986292635" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
-							<tool command="gcc -ldl" id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1793270907" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1793270907" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.331394605" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.exe.debug.option.debugging.level.2103020489" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.pthread.372879066" name="Support for pthread (-pthread)" superClass="gnu.c.compiler.option.pthread" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="gnu.c.compiler.option.misc.pic.702156051" name="Position Independent Code (-fPIC)" superClass="gnu.c.compiler.option.misc.pic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.903989516" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/ComunicationManager/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/amqpcpp/Src"/>
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/SesionManager/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/UtilJson/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/Includes/global.common/Src"/>
 								</option>
@@ -54,8 +50,6 @@
 							<tool command="g++ -ldl -lev" id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.180050236" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
 							<tool command="g++ -ldl -lev" id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.517333502" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.1796408697" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
-									<listOptionValue builtIn="false" value="SesionManager"/>
-									<listOptionValue builtIn="false" value="ViewManager"/>
 									<listOptionValue builtIn="false" value="ComunicationManager"/>
 									<listOptionValue builtIn="false" value="RabbitMQMiddleware"/>
 									<listOptionValue builtIn="false" value="amqpcpp"/>
@@ -103,10 +97,8 @@
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.1424787858" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option defaultValue="gnu.cpp.compiler.debugging.level.none" id="gnu.cpp.compiler.exe.release.option.debugging.level.2137615302" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1546405432" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/ComunicationManager/Src"/>
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/SesionManager/Src"/>
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/amqpcpp/Src"/>
+									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/ComunicationManager/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/UtilJson/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/Includes/global.common/Src"/>
 								</option>
@@ -114,16 +106,14 @@
 								<option id="gnu.cpp.compiler.option.other.pic.122039565" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1205333393" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
-							<tool command="gcc -ldl" id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.660055674" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.660055674" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.1424972113" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option defaultValue="gnu.c.debugging.level.none" id="gnu.c.compiler.exe.release.option.debugging.level.1240029219" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.pthread.689312754" name="Support for pthread (-pthread)" superClass="gnu.c.compiler.option.pthread" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="gnu.c.compiler.option.misc.pic.2006487590" name="Position Independent Code (-fPIC)" superClass="gnu.c.compiler.option.misc.pic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.1985913002" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/ComunicationManager/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/amqpcpp/Src"/>
-									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/SesionManager/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/UtilJson/Src"/>
 									<listOptionValue builtIn="false" value="/home/operador/ArandaChat/Source/Includes/global.common/Src"/>
 								</option>
@@ -132,7 +122,6 @@
 							<tool command="g++ -ldl -lev" id="cdt.managedbuild.tool.gnu.c.linker.exe.release.391708030" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
 							<tool command="g++ -ldl -lev" id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1362094466" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.1088287099" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" value="SesionManager"/>
 									<listOptionValue builtIn="false" value="ComunicationManager"/>
 									<listOptionValue builtIn="false" value="RabbitMQMiddleware"/>
 									<listOptionValue builtIn="false" value="amqpcpp"/>

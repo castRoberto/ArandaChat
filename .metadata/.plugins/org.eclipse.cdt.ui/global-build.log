@@ -1,0 +1,40 @@
+05:07:35 **** Clean-only build of configuration Debug for project AppArandaChat ****
+make clean 
+rm -rf  ./Src/View/View.o  ./Src/Sesion.o ./Src/main.o  ./Src/View/View.d  ./Src/Sesion.d ./Src/main.d  AppArandaChat
+ 
+05:07:36 **** Build of configuration Debug for project AppArandaChat ****
+make all 
+Building file: /home/operador/ArandaChat/Source/AppArandaChat/Src/View/View.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/ComunicationManager/Src -I/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src -I/home/operador/ArandaChat/Source/amqpcpp/Src -I/home/operador/ArandaChat/Source/UtilJson/Src -I/home/operador/ArandaChat/Source/Includes/global.common/Src -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"Src/View/View.d" -MT"Src/View/View.o" -o "Src/View/View.o" "/home/operador/ArandaChat/Source/AppArandaChat/Src/View/View.cpp"
+Finished building: /home/operador/ArandaChat/Source/AppArandaChat/Src/View/View.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/AppArandaChat/Src/Sesion.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/ComunicationManager/Src -I/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src -I/home/operador/ArandaChat/Source/amqpcpp/Src -I/home/operador/ArandaChat/Source/UtilJson/Src -I/home/operador/ArandaChat/Source/Includes/global.common/Src -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"Src/Sesion.d" -MT"Src/Sesion.o" -o "Src/Sesion.o" "/home/operador/ArandaChat/Source/AppArandaChat/Src/Sesion.cpp"
+/home/operador/ArandaChat/Source/AppArandaChat/Src/Sesion.cpp: In member function ‘virtual void Sesion::handleMessage(json, std::__cxx11::string)’:
+/home/operador/ArandaChat/Source/AppArandaChat/Src/Sesion.cpp:91:11: warning: enumeration value ‘eTypeMsg_NotFound’ not handled in switch [-Wswitch]
+    switch (typeMessage) {
+           ^
+/home/operador/ArandaChat/Source/AppArandaChat/Src/Sesion.cpp:99:40: warning: catching polymorphic type ‘class nlohmann::detail::exception’ by value [-Wcatch-value=]
+   } catch (nlohmann::detail::exception e) {
+                                        ^
+Finished building: /home/operador/ArandaChat/Source/AppArandaChat/Src/Sesion.cpp
+ 
+Building file: /home/operador/ArandaChat/Source/AppArandaChat/Src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -ldl -I/home/operador/ArandaChat/Source/ComunicationManager/Src -I/home/operador/ArandaChat/Source/RabbitMQMiddleware/Src -I/home/operador/ArandaChat/Source/amqpcpp/Src -I/home/operador/ArandaChat/Source/UtilJson/Src -I/home/operador/ArandaChat/Source/Includes/global.common/Src -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "/home/operador/ArandaChat/Source/AppArandaChat/Src/main.cpp"
+/home/operador/ArandaChat/Source/AppArandaChat/Src/main.cpp: In function ‘int main(int, char**)’:
+/home/operador/ArandaChat/Source/AppArandaChat/Src/main.cpp:23:7: warning: unused variable ‘exitApp’ [-Wunused-variable]
+  bool exitApp = false;
+       ^~~~~~~
+Finished building: /home/operador/ArandaChat/Source/AppArandaChat/Src/main.cpp
+ 
+Building target: AppArandaChat
+Invoking: GCC C++ Linker
+g++ -ldl -lev -L/home/operador/ArandaChat/Compiled/Libraries/Debug -pthread -o "AppArandaChat"  ./Src/View/View.o  ./Src/Sesion.o ./Src/main.o   -lComunicationManager -lRabbitMQMiddleware -lamqpcpp -lUtilJson -lglobal.common
+Finished building target: AppArandaChat
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/AppArandaChat; mv /home/operador/ArandaChat/Project/AppArandaChat/Debug/AppArandaChat /home/operador/ArandaChat/Compiled/
+ 
