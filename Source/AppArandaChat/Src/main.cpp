@@ -15,13 +15,11 @@
 #include <UtilJson/UtilJson.h>
 
 #include <global/common/sys/trap.h>
+#include <SesionManager/Sesion.h>
 
-#include "Sesion.h"
-#include "View/View.h"
+#include <ViewManager/View.h>
 
 int main(int argc, char *argv[]) {
-	bool exitApp = false;
-
 	std::string userName = argv[1];
 	std::string path;
 
@@ -42,13 +40,6 @@ int main(int argc, char *argv[]) {
 
 	View* view = new View(sesion);
 	view->init();
-
-//	while (!exitApp) {
-//		for (std::string user : sesion->getUsersOnline()) {
-//			LOG(user);
-//		}
-//		std::cin.get();
-//	}
 
 	return 0;
 }
