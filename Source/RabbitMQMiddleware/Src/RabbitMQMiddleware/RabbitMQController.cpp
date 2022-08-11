@@ -6,7 +6,7 @@
  */
 
 #include "RabbitMQController.h"
-
+// pthread_testcancel  pthread_join
 RabbitMQController::RabbitMQController() {}
 
 RabbitMQController::~RabbitMQController() {
@@ -50,9 +50,16 @@ RabbitMQController& RabbitMQController::getInstance() {
 	return instance;
 }
 
+void RabbitMQController::addRabbitEntity(Entity* rabbitEntity) {
+	this->rabbitMQEntities.push_back(rabbitEntity);
+}
+
 void RabbitMQController::configure() {
 	started = false;
 	configured = false;
+
+
+	LOG("[RabbitMQController.configure]: Controlador de rabbit configurado");
 
 #ifdef DEBUG
 	LOG("[RabbitMQController.configure]: Controladcor de rabbit configurado");
@@ -62,13 +69,45 @@ void RabbitMQController::configure() {
 			+ this->host + "/" + this->vhost;
 
 	loop = ev_loop_new(0);
-	myHandler = new MyHandler(loop);
 	address = new AMQP::Address(url);
+//	myHandler = new MyHandler(loop, this);
+//	connection = new AMQP::TcpConnection(myHandler, *address);
+//	channel = new AMQP::TcpChannel(connection);
+//
+	rabbitThread = new posix::EndlessThread(this);
+	manageConnection();
+	configured = true;
+}
+
+void RabbitMQController::manageConnection() {
+//	LOG("[RabbitMQController.manageConnection]: Se administra la conexion");
+
+	if(channel != 0) {
+		channel->close();
+		delete channel;
+		channel = 0;
+	}
+
+	if (connection != 0) {
+		connection->close();
+		delete connection;
+		connection = 0;
+	}
+
+	if(myHandler != 0) {
+		delete myHandler;
+		myHandler = 0;
+	}
+	myHandler = new MyHandler(loop, this);
 	connection = new AMQP::TcpConnection(myHandler, *address);
 	channel = new AMQP::TcpChannel(connection);
+}
 
-	rabbitThread = new posix::EndlessThread(this);
-	configured = true;
+void RabbitMQController::restartEntities() {
+//	LOG("[RabbitMQController.restartEntities]: Se reinician las entidades");
+	for(Entity* entity : rabbitMQEntities) {
+		entity->init();
+	}
 }
 
 void RabbitMQController::configure(std::string username, std::string password,
@@ -111,7 +150,7 @@ void* RabbitMQController::run(void *args) {
 }
 
 AMQP::ExchangeType RabbitMQController::eExchangeTypeStringtoEnum(std::string type) {
-	AMQP::ExchangeType retEnum;
+	AMQP::ExchangeType retEnum = AMQP::ExchangeType::topic;
 	std::string typeStr = "eExchangeType_";
 	typeStr.append(type);
 

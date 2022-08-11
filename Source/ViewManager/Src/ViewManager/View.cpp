@@ -50,7 +50,7 @@ void View::handleComands() {
 	system("clear");
 	if(comand.compare("uo") == 0) {
 		showUsersOnline();
-		LOG(" Presione una tecla para volver");
+		LOG(" Presione enter para volver");
 		std::getline(std::cin, comand);
 	} else if(comand.compare("ic") == 0) {
 		sesion->initChat();

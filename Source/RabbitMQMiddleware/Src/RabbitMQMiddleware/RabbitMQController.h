@@ -8,16 +8,23 @@
 #ifndef RABBITMQCONTROLLER_H_
 #define RABBITMQCONTROLLER_H_
 
+#include <chrono>
+#include <thread>
+
 #include <iostream>
 #include <string>
 #include <functional>
-
+#include <pthread.h>
+#include <list>
 #include <global/common/global/Runnable.h>
 #include <global/common/sys/thread/Thread.h>
 #include <global/common/sys/thread/EndlessThread.h>
 #include <global/common/sys/PosixError.h>
 
+
 #include "MyHandler.h"
+#include "Interface/IConnectionManager.h"
+#include "Interface/Entity.h"
 #include <UtilJson/UtilJson.h>
 
 #ifndef LOG
@@ -26,10 +33,12 @@
 
 typedef nlohmann::json json;
 
+//class RabbitMQEntity;
+
 /**
  * @brief Clase para gestionar la conexion al broker de rabbit
  */
-class RabbitMQController : public Runnable {
+class RabbitMQController : public IConnectionManager, public Runnable {
 private:
 	std::string url;
 	std::string username;
@@ -44,6 +53,8 @@ private:
 	AMQP::TcpChannel* channel = 0;
 
 	posix::Thread* rabbitThread = 0;
+
+	std::list<Entity*> rabbitMQEntities;
 
 	bool started = false;
 	bool configured = false;
@@ -78,6 +89,8 @@ public:
 	 */
 	void configure(json config);
 
+	void addRabbitEntity(Entity* rabbitEntity);
+
 	/**
 	 * @brief Establece parametros de conexion a partir de un conjunto de valores
 	 * prestablecidos
@@ -95,6 +108,13 @@ public:
 	 * @brief Metodo para iniciar la hebra que gestiona el loop de eventos
 	 */
 	void start();
+
+	/**
+	 * @brief Metodo para construir una conexion con el broker
+	 */
+	void manageConnection() override;
+
+	void restartEntities() override;
 
 	/**
 	 * @brief Metodo para devolver la instancia unica del canal

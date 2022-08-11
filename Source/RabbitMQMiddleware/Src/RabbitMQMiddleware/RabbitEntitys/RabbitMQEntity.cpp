@@ -50,8 +50,13 @@ RabbitMQEntity::~RabbitMQEntity() {
 
 }
 
+void RabbitMQEntity::init() {
+	LOG("***************************************[RabbitMQEntity.init]");
+}
+
 void RabbitMQEntity::activateRabbit() {
 	if (!rabbitController.isReady()) {
 		rabbitController.start();
 	}
+	this->rabbitController.addRabbitEntity(this);
 }

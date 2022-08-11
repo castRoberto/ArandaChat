@@ -4,8 +4,11 @@
 #include <amqpcpp.h>
 #include <amqpcpp/libev.h>
 
+#include "Interface/IConnectionManager.h"
 
 class MyHandler: public AMQP::LibEvHandler {
+private:
+	IConnectionManager* connectionManager;
 
     virtual void onAttached(AMQP::TcpConnection *connection) override;
     virtual void onConnected(AMQP::TcpConnection *connection) override;
@@ -17,6 +20,6 @@ class MyHandler: public AMQP::LibEvHandler {
     virtual void onDetached(AMQP::TcpConnection *connection) override;
 
 public:
-        MyHandler(struct ev_loop *loop): AMQP::LibEvHandler(loop){}
+        MyHandler(struct ev_loop *loop, IConnectionManager* connectionManager);
 };
 #endif

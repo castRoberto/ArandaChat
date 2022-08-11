@@ -1,0 +1,25 @@
+21:42:27 **** Build of configuration Debug for project SQLite ****
+make all 
+Building file: /home/operador/ArandaChat/Source/SQLite/Src/SQLite/shell.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Src/SQLite/shell.d" -MT"Src/SQLite/shell.o" -o "Src/SQLite/shell.o" "/home/operador/ArandaChat/Source/SQLite/Src/SQLite/shell.c"
+Finished building: /home/operador/ArandaChat/Source/SQLite/Src/SQLite/shell.c
+ 
+Building file: /home/operador/ArandaChat/Source/SQLite/Src/SQLite/sqlite3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Src/SQLite/sqlite3.d" -MT"Src/SQLite/sqlite3.o" -o "Src/SQLite/sqlite3.o" "/home/operador/ArandaChat/Source/SQLite/Src/SQLite/sqlite3.c"
+Finished building: /home/operador/ArandaChat/Source/SQLite/Src/SQLite/sqlite3.c
+ 
+Building target: libSQLite.a
+Invoking: GCC Archiver
+ar -r  "libSQLite.a"  ./Src/SQLite/shell.o ./Src/SQLite/sqlite3.o   
+ar: creando libSQLite.a
+Finished building target: libSQLite.a
+ 
+make --no-print-directory post-build
+rm /home/operador/ArandaChat/Compiled/Libraries/Debug/libSQLite.a; mv /home/operador/ArandaChat/Project/SQLite/Debug/libSQLite.a /home/operador/ArandaChat/Compiled/Libraries/Debug/
+rm: no se puede borrar '/home/operador/ArandaChat/Compiled/Libraries/Debug/libSQLite.a': No existe el fichero o el directorio
+ 
+
+21:42:41 Build Finished. 0 errors, 0 warnings. (took 14s.797ms)
+

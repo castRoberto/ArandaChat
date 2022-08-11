@@ -8,10 +8,27 @@
 #ifndef PRODUCER_H_
 #define PRODUCER_H_
 
+#include <global/common/global/Runnable.h>
+#include <global/common/sys/sync/Monitor.h>
+
 #include "RabbitMQEntity.h"
 #include "RabbitMQController.h"
 
-class Producer : public RabbitMQEntity {
+struct queueMSG {
+	std::string message;
+	std::string routingKey;
+};
+
+class Producer : public RabbitMQEntity, public Runnable {
+private:
+	posix::Thread* producerThread = 0;
+
+	std::list<queueMSG> queueMessages;
+	/// @brief monitor para controlar el trabajo de la hebra
+	posix::Monitor queueMsgToSend;
+	/// @brief monitor para controlar el trabajo de la hebra
+	posix::Monitor notEmptyMsgToSend;
+
 public:
 	Producer(std::string& producerName,
 			std::string& username,
@@ -25,6 +42,13 @@ public:
 
 	void init() override;
 	void publish(const std::string& msg, const std::string& routingKey);
+
+	void sendData();
+
+	void* run(void* args = 0);
+
+private:
+	void destroyThread();
 };
 
 #endif /* PRODUCER_H_ */

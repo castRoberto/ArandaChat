@@ -11,6 +11,7 @@
 #include <set>
 #include <chrono>
 #include <thread>
+#include <ostream>
 
 #include <UtilJson/UtilJson.h>
 

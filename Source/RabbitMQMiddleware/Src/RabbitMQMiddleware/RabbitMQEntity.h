@@ -12,8 +12,10 @@
 #include <string>
 
 #include <amqpcpp.h>
+#include <UtilJson/UtilJson.h>
 
 #include "RabbitMQController.h"
+#include "Interface/Entity.h"
 
 namespace jKeys {
 	const std::string queueKey 					= 	"queue";
@@ -21,19 +23,19 @@ namespace jKeys {
 	const std::string queueDurableKey 			= 	"durable";
 	const std::string queueAutoDeleteKey 		= 	"autodelete";
 	const std::string queuePassiveKey 			= 	"passive";
-	const std::string queueExclusiveKey 		= 	"exclusive";
+	const std::string queueExclusiveKey 			= 	"exclusive";
 
 	const std::string exchangeKey 				= 	"exchange";
 	const std::string exchangeNameKey 			= 	"name";
 	const std::string exchangeDurableKey 		= 	"durable";
-	const std::string exchangeAutoDeleteKey 	= 	"autodelete";
+	const std::string exchangeAutoDeleteKey 		= 	"autodelete";
 	const std::string exchangePassiveKey 		= 	"passive";
 	const std::string exchangeInternalKey 		= 	"internal";
 	const std::string exchangeTypeKey 			= 	"type";
 	const std::string exchangeRoutingKeysKey 	= 	"routingKeys";
 }
 
-class RabbitMQEntity {
+class RabbitMQEntity : public Entity {
 protected:
 	std::string entityKey;
 	std::string username;
@@ -63,7 +65,7 @@ public:
 	RabbitMQEntity(std::string entityKey, json config);
 	virtual ~RabbitMQEntity();
 
-	virtual void init() = 0;
+	void init() override;
 	void activateRabbit();
 };
 

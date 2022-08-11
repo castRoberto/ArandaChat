@@ -49,10 +49,15 @@ Consumer::~Consumer() {
 
 
 void Consumer::init() {
+//	LOG("**************************[Consumer.init]: Se configura un consumer");
 	int qflags = this->qExclusive? AMQP::exclusive: 0;
-	rabbitController.getChannel()->declareQueue(qflags).onSuccess([this](const std::string &name, uint32_t messageCount,uint32_t consumercount) {
-		nameQueue = name;
-	});
+
+//	std::this_thread::sleep_for(std::chrono::milliseconds(20000));
+
+//	rabbitController.getChannel()->removeQueue(nameQueue);
+	nameQueue = "";
+	rabbitController.getChannel()->declareQueue(qflags).onSuccess([this](const std::string &nameQueue, uint32_t messageCount,uint32_t consumercount) {});
+
 	int eflags = this->eDurable? AMQP::durable : 0;
 	rabbitController.getChannel()->declareExchange(exchange, exchangeType, eflags).onSuccess([this]() {
 		std::list<std::string>::iterator it;
@@ -61,7 +66,7 @@ void Consumer::init() {
 		}
 	});
 
-	auto callBackData = [this](const AMQP::Message &message, uint64_t deliveryTag, bool redelivered){
+	auto callBackData = [this](const AMQP::Message &message, uint64_t deliveryTag, bool redelivered) {
 		char msg_receive[message.bodySize() + 1];
 		strncpy(msg_receive, message.body(), message.bodySize() + 1);
 		msg_receive[message.bodySize()] = '\0';  //extract message from broker and converts it into string
@@ -71,12 +76,13 @@ void Consumer::init() {
 		rabbitController.getChannel()->ack(deliveryTag);
 	};
 
-	auto callBackSuccess = [](const std::string& consumertag){
+	auto callBackSuccess = [](const std::string& consumertag) {
 		LOG(consumertag);
 	};
 
-	auto callBackError = [](const char *message){
+	auto callBackError = [](const char *message) {
 		LOG(message);
+		LOG("[callBackError]: Se produjo un error en CallBackError error");
 	};
 
 	rabbitController.getChannel()->consume(nameQueue).onReceived(callBackData).onSuccess(callBackSuccess).onError(callBackError);
